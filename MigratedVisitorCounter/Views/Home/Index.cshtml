@@ -1,0 +1,40 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <style>
+        body {
+            background-color: #f3ac1a;
+        }
+
+        h1 {
+            background-color: #f2f50f;
+        }
+
+        p {
+            background-color: #f3ac1a;
+        }
+
+        #getTokenMessage {
+            background-color: #ff0000;
+            font-size: 24px
+        }
+    </style>
+    <h1>Get your connection token here to connect to internal sites and services.</h1>
+    <p id="getTokenMessage"></p>
+    <input style="padding:10px" type="button" id="getButton" onclick="GetMessage()" value="Get your tokens for Today" />
+
+</div>
+<script type="text/javascript">
+    function GetMessage() {
+        $.get("/Home/GetMessage", function (data) {
+            $("#getTokenMessage").html(data);
+            document.getElementById("getButton").value = "Get Another token for a different service";
+        });
+    }
+</script>
+
