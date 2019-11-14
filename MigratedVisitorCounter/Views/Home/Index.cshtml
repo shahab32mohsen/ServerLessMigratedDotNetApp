@@ -31,7 +31,7 @@
 </div>
 <script type="text/javascript">
     function GetMessage() {
-        $.get("/Home/GetMessage", function (data) {
+        $.get("/Prod/Home/GetMessage", function (data) {
             $("#getTokenMessage").html(data);
             document.getElementById("getButton").value = "Get Another token for a different service";
         });

@@ -10,9 +10,9 @@ using Microsoft.Extensions.Logging;
 
 namespace MigratedVisitorCounter
 {
-    public class Program
+    public class Programs
     {
-        public static void Main(string[] args)
+        public static void Mains(string[] args)
         {
             CreateWebHostBuilder(args).Build().Run();
         }

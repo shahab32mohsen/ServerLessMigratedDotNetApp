@@ -28,7 +28,7 @@ namespace MigratedVisitorCounter.Controllers
             ViewData["Message"] = string.Format("You visited {0} times", views);
 
             String message = "Your connection token for today is:<b> " + response.Replace(" ", "") + " </b>and you have retrieved a token <b>" + views + "</b> time(s) during this session";
-            return new JsonResult (message);
+            return new JsonResult(message);
         }
 
         public IActionResult About()

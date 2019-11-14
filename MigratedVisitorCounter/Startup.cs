@@ -52,6 +52,8 @@ namespace MigratedVisitorCounter
             app.UseStaticFiles();
             app.UseCookiePolicy();
             app.UseSession();
+            app.UseDefaultFiles();
+            app.UseStaticFiles();
 
             app.UseMvc(routes =>
             {
